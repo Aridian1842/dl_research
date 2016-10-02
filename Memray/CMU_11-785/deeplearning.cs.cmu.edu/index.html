@@ -1,0 +1,912 @@
+<P ALIGN=CENTER>
+<html>
+<HEAD><TITLE>11-785 DEEP LEARNING</TITLE></HEAD>
+<BODY  BGCOLOR="#FFFFFF" TEXT="#00007F" Font="Garamond"
+ VLINK="#007fff" LINK="#7f7f7f" ALINK="#e0ffd0">
+
+<center><H1>Deep Learning</h1>
+<h3>Instructor: Bhiksha Raj</h3>
+</center>
+<center>
+<table bgcolor="#ffff00">
+<tr>
+<td><b>COURSE NUMBER</b></td><td>--</td><td><b>11-785</b></td>
+</tr>
+</tr>
+</table>
+</center>
+
+<table border="0">
+<tr>
+<td><b>Timings:</b></td><td>1:30 p.m. -- 2:50 p.m.</td>
+</tr>
+<tr>
+<td><b>Days:</b></td><td>Mondays and Wednesdays<td>
+</tr>
+<tr>
+<td><b>Location:</b></td> <td>GHC 4211</td>
+</tr>
+<tr>
+<td><b>Website:</b></td> <td><b><a href="http://deeplearning.cs.cmu.edu">http://deeplearning.cs.cmu.edu</a></b></td>
+</tr>
+<tr>
+</tr>
+</table> 
+<p><b>Credits:</b> 12 
+<p>
+<table border="0">
+<tr>
+<td> Instructor:  Bhiksha Raj</td>
+</tr>
+<tr>
+<td> Contact:  email:bhiksha@cs.cmu.edu,&nbsp;&nbsp;Phone:8-9826,&nbsp;&nbsp;Office: GHC6705</td>
+</tr>
+<tr>
+<td> Office hours: TBD
+</tr>
+<tr>
+<td> TA: Zhenzhong (Danny) Lan (Office hours: Friday, 4:00PM~5:00PM, GHC6225), Volkan Cirik</td>
+</tr>
+<!--tr>
+<td> Contact:  email:anderso@cs.cmu.edu,&nbsp;&nbsp;Office: GHC7709</td>
+</tr>
+<tr>
+<td> Office hours: 12:30-2:00 Fridays.</td-->
+</table>
+</center>
+
+
+<p> Deep learning algorithms attempt to learn multi-level representations of data, embodying a hierarchy of factors that may explain them. Such algorithms have been demonstrated to be effective both at uncovering underlying structure in data, and have been successfully applied to a large variety of problems ranging from image classification, to natural language processing and speech recognition.
+
+<p> In this course students will learn about this resurgent subject. The course presents the subject through a series of seminars and labs, which will explore it from its early beginnings, and work themselves to some of the state of the art. The seminars will cover the basics of deep learning and the underlying theory, as well as the breadth of application areas to which it has been applied, as well as the latest issues on learning from very large amounts of data. Although the concept of deep learning has been applied to a number of different models, we will concentrate largely, although not entirely, on the connectionist architectures that are most commonly associated with it.
+
+<p> The labs will exercise the basics of several aspects of implementation and investigation of these networks.
+
+<p>Students who participate in the course are expected to present at least two papers, in addition to completing all labs. at least two papers, in addition to completing all labs. Presentations are expected to be thorough and, where applicable, illustrated through experiments and simulations conducted by the student. 
+
+<p>Attendance is mandatory.
+
+<h3><a href=labs/labs.html>Labs</a></h3>
+<!--table border="1">
+<tr>
+<td>Lab 1:</td> <td>Perceptrons and MLPs</td>
+<td><a href="labs/lab1/DL-CLASS-LAB1-PART1.pdf">[Part 1]</a><br>
+<a href="labs/lab1/DL-CLASS-LAB1-PART2.pdf">[Part 2]</a>
+</td>
+<td><a href="labs/lab1/dataforlab1.zip">Data sets</a></td><td>Part 1 Due: 19 Sep 2014<br>Part 2 Due: 24 Sep 2014</td>
+</tr>
+</table>
+<!--p><b>Lab 2 is up</b>
+<!--table border="1">
+<tr>
+<td>Lab 1:</td> <td>The effect of increasing network depth</td>
+<td><a href="labs/lab2/dl-class-lab2.pdf">[Problem Set]</a><br>
+</td>
+<td><a href="labs/lab2/mnist-uint8.mat">Data set</a></td><td>Due: 17 Oct 2013</td>
+</tr>
+</table!-->
+
+<h3>Papers and presentations</h3>
+
+<table border="2">
+<tr>
+<td><b>Date</td><td>Topic/paper</td><td>Author</td><td>Presenter</td><td>Additional Links</b></td>
+</tr>
+<tr>
+<td>31 Aug 2015</td><td>Introduction</td><td></td><td>Bhiksha Raj<br><a href="slides.2015/0.Intro.pdf">[slides]</a></td><td></td>
+</tr>
+<tr>
+<td>21 Sep 2015</td><td><a href="Intro.pdf">Torch, Theano and AWS</a></td><td></td><td>Danny Lan and Prasanna Muthukumar</td><td><a href="slides.2015/DL_class_tutorial.tar.gz">[Prasanna's code]</a><br>
+<a href="slides.2015/Deep_Learning_Toolbox_Tutorial.pdf">[Danny's Slides]</a></td>
+</tr>
+<tr>
+<td>9 Sep 2015</td><td><a href="pdfs/Bain.On.Neural.Networks.pdf">Bain on Neural Networks. Brain and Cognition 33:295-305, 1997</a></td><td>Alan L. Wilkes and Nicholas J. Wade</td><td>Stephanie Rosenthal<br><a href="slides.2015/1.bain.pptx">[slides]</a></td><td></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/McCulloch.and.Pitts.pdf">McCulloch, W.S. & Pitts, W.H. (1943). A Logical Calculus of the Ideas Immanent in Nervous Activity, Bulletin of Mathematical Biophysics, 5:115-137, 1943.</a></td><td>W.S. McCulloch and W.H. Pitts</td><td>Fatima Talib Al-Raisi<br><a href="slides.2015/2.McCulloch.pptx">[slides]</a></td><td><a href="http://www.mind.ilstu.edu/curriculum/mcp_neurons/mcp_neuron_1.php">Michael Marsalli's tutorial on the McCulloch and Pitts Neuron</a>
+<br>
+<a href="pdfs/First_Computational_Theory_of_Mind_and_Brain.pdf">The First Computational Theory of Mind and Brain: A Close Look at McCulloch and Pitts' "Logical Calculus of Ideas Immanent in Nervous Activity", Gualtiero Piccinini, Synthese 141: 175.215, 2004</a>
+
+</td>
+</tr>
+<tr>
+<td>14 Sep 2015</td><td><a href="pdfs/Rosenblatt.perceptron.pdf">The Perceptron: A Probalistic Model For Information Storage And Organization In The Brain. Psychological Review 65 (6): 386.408, 1958.</a></td><td>F. Rosenblatt</td><td>Manu<br><a href="slides.2015/3.rosenblatt.pdf">[slides]</a></td>
+<td>
+<a href="pdfs/Winder.pdf">More about threshold logic. Proc. Second Annual Symposium on Switching Circuit Theory and Logical Design, 1961.</a> R. O. Winder.
+</td>
+</tr>
+<tr>
+<td>14 Sep 2015</a></td><td><a href="pdfs/Hebb.1949.pdf">The organization of Behavior, 1949.</a></td><td>D. O. Hebb</td><td>Srivaths R.<br><a href="slides.2015/4.hebb.pdf">[slides]</a></td><td></td>
+</tr>
+<tr>
+<td>16 Sep 2015</td><td><a href="pdfs/Widrow.1992.pdf">The Widrow Hoff learning rule (ADALINE and MADALINE).</a></td><td>Widrow</td><td>Xuanchong<br><a href="slides.2015/5.widrow.pdf">[slides]</a></td><td></td>
+</tr>
+<tr>
+<td>21 Sep 2015</td>
+<td><a href="pdfs/Werbos.backprop.pdf">
+Backpropagation through time: what it does and how to do it., Proc. IEEE 1990</a></td>
+<td>P. Werbos</td>
+<td>Bernie<br><a href="slides.2015/6.werbos.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>21 Sep 2015</td>
+<td><a href="pdfs/Gori_Tesi.pdf">
+On the problem of local minima in backpropagation, IEEE tran.
+Pattern Analysis and Machine Intelligence, Vol 14(1), 76-86, 1992.
+</a></td>
+<td>M. Gori, A. Tesi</td>
+<td>Sai<br><a href="slides.2015/7.gori.pdf">[slides]</a></td>
+<td><a href="http://people.csail.mit.edu/rivest/pubs/BR93.pdf">Training a 3-node neural network is NP-complete,  Avrim Blum and Ron Rivest,  COLT 88
+</a></td>
+</tr>
+<tr>
+<td>23 Sep 2015</td>
+<td><a href="pdfs/Brady.BPfailsWherePerceptronsSucceed.pdf">
+Backpropagation fails where perceptrons succeed, IEEE Trans on circuits and systems.  Vol. 36:5, May 1989
+</a></td>
+<td>Martin Brady, Raghu Raghavan, Joseph Slawny</td>
+<td>Suruchi<br><a href="slides.2015/8.brady.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>23 September</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/Kornick_et_al.pdf">
+Multilayer feedforward networks are universal approximators, Neural Networks, Vol:2(3), 359-366, 1989
+</a></td>
+<td>K. Hornik, M. Stinchcombe, H. White</td>
+<td>Aman Gupta<br><a href="slides.2015/9.hornik.pdf">[slides]</a></td>
+<td>
+<br>
+<a href="pdfs/2000-nn-benitez-nn-approximators.pdf">
+Neural networks with a continuous squashing function in the output are universal approximators, J.L. Castro, C.J. Mantas, J.M. Benitez, Neural Networks, Vol 13, pp. 561-563, 2000</a>
+</td>
+</tr>
+<tr>
+<td>28 September</td>
+<td><a href="http://neuralnetworksanddeeplearning.com/chap4.html">
+A visual illustration of how neural networks approximate functions
+</a></td>
+<td>Michael Nielsen</td>
+<td>Nikolas Wolfe<br><a href="slides.2015/10.nielsen.pdf">[slides]</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>28 September</td>
+<td><a href="pdfs/OJA.pca.pdf">
+A Simplified Neuron Model as a Principal Component Analyzer, J. Math. Biology (1982) 15:267-273</a></td>
+<td>Erkki Oja</td>
+<td>Amir Zade<br><a href="slides.2015/11.oja.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>30 September</td>
+<td><a href="pdfs/kohonen.SOM.pdf">
+The self-organizing map. Proc. IEEE, Vol 79, 1464:1480, 1990
+<td>Teuvo Kohonen</td>
+<td>Karishma Agrawal<br><a href="slides.2015/12.korhonen.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>30 September</td>
+<td><a href="pdfs/kohonen.dtwsom.pdf">
+Self-Organizing Maps and Learning Vector Quantization for Feature Sequences
+<td>Panu Somervuo, Teuvo Kohonen</td>
+<td>Aditya Sharma<br><a href="slides.2015/13.somervuo.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>5 October</td>
+<td><a href="pdfs/Hopfield.1982.pdf">
+Neural networks and physical systems with emergent collective computational abilities, Proc. Natl. Acad. Sciences, Vol 79, 2554-2558, 1982
+<td>John Hopfield</td>
+<td>Hinton<br><a href="slides.2015/14.hopfield.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>5 October</td>
+<td><a href="pdfs/Ackley_Hinton_Sejnowski.pdf">
+A learning algorithm for Boltzmann machines, Cognitive Science, 9, 147-169, 1985
+<td>D. Ackley, G. Hinton, T. Sejnowski</td>
+<td>Shi Zong<br>
+<a href="slides.2015/15.ackley.pdf">[slides]</a></td>
+<td><a href="http://www.cs.toronto.edu/~fritz/absps/pdp7.pdf">Learning and Relearning in Boltzmann machines, T. Sejnowski and G. Hinton</a><br>
+<a href="pdfs/Xu_Oja.pdf">Improved simulated annealing, Boltzmann machine, and attributed graph matching, Lei Xu and Erkii Oja, EURASIP Workshop on Neural Networks, vol 412,  LNCS, Springer, pp: 151-160, 1990</a></td>
+</tr>
+<tr>
+<td>5 October</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/waibel89_TDNN.pdf">
+Phoneme recognition using time-delay neural networks, IEEE trans.
+Acoustics, Speech Signal Processing, Vol 37(3), March 1989
+</a></td>
+<td>Waibel, Hanazawa, Hinton, Shikano, Lang</td>
+<td>Allard Dupuis<br>
+<a href="slides.2015/16.waibel.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>7 October</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/Fukushima_Miyake.pdf"> Neocognitron: A new algorithm for pattern recognition tolerant of deformations and shifts in position, Pattern Recognition Vol. 15(6), pp. 455-469, 1982 </a></td>
+<td>Kunihiko Fukushima and Sei Miyake</td>
+<td>Chenchen Zhu<br>
+<a href="slides.2015/17.fukushima.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>7 October</td>
+<td><a href="http://papers.nips.cc/paper/20-an-artificial-neural-network-for-spatio-temporal-bipolar-patterns-application-to-phoneme-classification.pdf"> An artificial neural network for spatio-temporal bipolar patterns: application to phoneme classification </a></td>
+<td>Toshiteru Homma</td>
+<td>Serim Park<br>
+<a href="slides.2015/18.homma.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<tr>
+<td>7 October</td>
+<td><a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf">Gradient based learning applied to document recognition, Proceedings of IEEE, Vol 86:11, Nov 1998, pp 2278-2324.</a></td>
+<td>Yann Lecun, Leon Boton, Yohsua Bengio, Patrick Haffner</td>
+<td>Lu Jiang<br>
+<a href="slides.2015/19.lecun.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>12 Oct</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/1104/Supervised_Sequence_Labeling.pdf">
+Supervised sequence labelling with recurrent neural networks, PhD
+dissertation, T. U. Munchen, 2008, Chapters 4 and 7
+</a></td>
+<td>Alex Graves</td>
+<td>Kazuya<br><a href="slides.2015/20.graves.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>12 Oct</td>
+<td><a href="http://www.di.ufpe.br/~fnj/RNA/bibliografia/BRNN.pdf">
+Bidirectional Recurrent Neural Networks
+</a></td>
+<td>Mike Schuster and Kuldip K. Paliwal</td>
+<td>Praveen Palanisamy<br><a href="slides.2015/21.schuster.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>12 Oct</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf">
+Long Short-Term Memory
+</a></td>
+<td>Sepp Hochreiter Jurgen Schmidhuber</td>
+<td>Zihang Dai<br><a href="slides.2015/22.hochreiter.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>14 Oct</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/cascor-tr.pdf">
+The Cascade-Correlation Learning Architecture
+</a></td>
+<td>Scott E. Fahlman and Christian Lebiere</td>
+<td>Scott E. Fahlman<br><a href="slides.2015/23.fahlman.pptx">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>14 Oct</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/rcc-tr.pdf">
+The Recurrent Cascade-Correlation Architecture
+</a></td>
+<td>Scott E. Fahlman</td>
+<td>Scott E. Fahlman</td>
+<td></td>
+</tr>
+<tr>
+<td>19 Oct</td>
+<td><a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf">
+ImageNet Classification with Deep Convolutional
+Neural Networks
+</a></td>
+<td>Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton</td>
+<td>Guillaume Lample<br><a href="slides.2015/24.krizhevsky.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>19 Oct</td>
+<td><a href="http://arxiv.org/pdf/1409.1556v6.pdf">
+Very Deep Convolutional Networks for Large-Scale Image Recognition
+</a></td>
+<td>Karen Simonyan, Andrew Zisserman</td>
+<td>Pradeep<br><a href="slides.2015/25.simonyan.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<td>21 Oct</td>
+<td><a href="http://arxiv.org/pdf/1311.2901v3.pdf">
+Visualizing and Understanding Convolutional Networks
+</a></td>
+<td>Matthew D Zeiler, Rob Fergus</td>
+<td>Wanli<br><a href="slides.2015/26.zeiler.pdf">[slides]</a></td>
+<td></td>
+</tr>
+</tr>
+<td>21 Oct</td>
+<td><a href="http://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf">
+Dropout: A Simple Way to Prevent Neural Networks from
+Overfitting
+</a></td>
+<td>Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, Ruslan Salakhutdinov</td>
+<td>Xuanchong<td>
+<td></td>
+</tr>
+</tr>
+<td>21 Oct</td>
+<td><a href="http://arxiv.org/abs/1302.4389">
+Maxout Network
+</a></td>
+<td>Ian J. Goodfellow, David Warde-Farley, Mehdi Mirza, Aaron Courville, Yoshua Bengio</td>
+<td>Sandeep<td>
+<td></td>
+</tr>
+
+
+<!--tr>
+<tr>
+<td></td>
+<td><a href="pdfs/Smolensky.1986.pdf">
+Information processing in dynamical
+systems: Foundations of Harmony theory; InParallel Distributed
+Processing: Explorations in the microstructure of cognition, Rumelhart
+and McLelland eds., 1986</a></td>
+<td>Paul Smolensky</td>
+<td>Dishan Gupta<br>
+<a href="slides.2014/6.Dishan.SmolenskyRBM.pdf">[slides]</a></td>
+<td><a href="pdfs/Wellings_Rosen_Hinton.2004.pdf">Exponential family harmoniums with and application to information retrieval, M. Weling, M. Rosen-Zvi, G. Hinton, Advances in Neural Information Processing Systems (NIPS), 2004</a></td>
+</tr>
+<tr>
+<td>22 Sep 2014</td>
+<td>Discussion of Boltzmann machines.  </td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>24 Sep 2014</td>
+<td><a href="pdfs/Brady.BPfailsWherePerceptronsSucceed.pdf">
+Backpropagation fails where perceptrons succeed, IEEE Trans on circuits and systems.  Vol. 36:5, May 1989
+</a></td>
+<td>Martin Brady, Raghu Raghavan, Joseph Slawny</td>
+<td>Chu-Cheng Lin<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/Gori_Tesi.pdf">
+On the problem of local minima in backpropagation, IEEE tran.
+Pattern Analysis and Machine Intelligence, Vol 14(1), 76-86, 1992.
+</a></td>
+<td>M. Gori, A. Tesi</td>
+<td>Adams Wei Yu<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td><a href="http://people.csail.mit.edu/rivest/pubs/BR93.pdf">Training a 3-node neural network is NP-complete,  Avrim Blum and Ron Rivest,  COLT 88
+</a></td>
+</tr>
+<tr>
+<td>29 Sep 2014</td>
+<td><a href="http://papers.nips.cc/paper/4350-shallow-vs-deep-sum-product-networks.pdf">
+Shallow vs. Deep Sum-Product Networks, NIPS 2011
+</a></td>
+<td>
+ Oliver Delalleau and Yashua Bengio,
+</td>
+<td>Pradeep Dasigi<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/bianchini_scarselli.pdf">
+On the complexity of shallow and deep neural network classifiers
+IEEE transactions on neural networks and learning systems.  Vol 25:8,
+1553 - 1565, Jan 2014.
+</a></td>
+<td>
+Monica Bianchini and Franco Scarselli
+</td>
+<td>Jin Sun<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+<tr>
+<td>1 Oct 2014</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/Kornick_et_al.pdf">
+Multilayer feedforward networks are universal approximators, Neural Networks, Vol:2(3), 359-366, 1989
+</a></td>
+<td>K. Hornik, M. Stinchcombe, H. White</td>
+<td>Shane Moon<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td>
+<br>
+<a href="pdfs/2000-nn-benitez-nn-approximators.pdf">
+Neural networks with a continuous squashing function in the output are universal approximators, J.L. Castro, C.J. Mantas, J.M. Benitez, Neural Networks, Vol 13, pp. 561-563, 2000</a>
+<br>
+<a href="http://neuralnetworksanddeeplearning.com/chap4.html">A pretty good visual explanation of how NNets can approximate functions</a>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://binds.cs.umass.edu/papers/1995_Siegelmann_JComSysSci.pdf">
+On the computational power of neural networks. Journal of Computer and System Sciences, Vol 50, pp 132-150, 1995.
+</a></td>
+<td>Hava T. Siegelmann</td>
+<td>Tomas Aftalion<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>6 Oct 2014</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/waibel89_TDNN.pdf">
+Phoneme recognition using time-delay neural networks, IEEE trans.
+Acoustics, Speech Signal Processing, Vol 37(3), March 1989
+</a></td>
+<td>Waibel, Hanazawa, Hinton, Shikano, Lang</td>
+<td>Hiying Li<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf">Gradient based learning applied to document recognition, Proceedings of IEEE, Vol 86:11, Nov 1998, pp 2278-2324.</a></td>
+<td>Yann Lecun, Leon Boton, Yohsua Bengio, Patrick Haffner</td>
+<td>Jin Sun<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/Fukushima_Miyake.pdf"> Neocognitron: A new algorithm for pattern recognition tolerant of deformations and shifts in position, Pattern Recognition Vol. 15(6), pp. 455-469, 1982, Fukushima and Miyake </a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/perlmutter.rnn.pdf">
+Recurrent neural nets and algorithms to train them:
+Gradient calculations for dynamic recurrent neural networks: a survey,  
+IEEE transactions on neural networks, pp. 1212-1227, Vol. 6:5, 1995.
+</a></td>
+<td>Barak Perlmutter</td>
+<td>Tina Liu<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>15 Oct 2014</td>
+<td><a href="http://www.dsi.unifi.it/~paolo/ps/tnn-94-gradient.pdf">
+Learning long-term dependencies with gradient descent is difficult. IEEE Trans. on Neural Networks, Vol 5:2, pp 157-166, 2002.
+</a></td>
+<td>Y. Bengio, P. Simard, P. Fasconi</td>
+<td>Yulong Pei<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/Narx.pdf">
+Learning long-term dependencies in NARX recurrent neural networks. IEEE Trans. on Neural Networks, Vol 7:6, pp 1329-1338, 1996.
+</a></td>
+<td>T. Lin, B. Horne, P. Tino, C. Giles</td>
+<td>Zexi Mao<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>20 Oct 2014</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/Hinton_2002.pdf">
+Training products of experts by minimizing contrastive divergence,
+Neural Computation, Vol. 14(8), pp. 1771-1800, 2002.
+</a></td>
+<td>G. Hinton</td>
+<td>Pradeep Dasigi<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/Hinton_Osindero_fast.pdf">
+A Fast Learning Algorithm for Deep Belief Nets
+</a></td>
+<td>G. Hinton, S. Osindero, Y. Teh</td>
+<td>Meng Song<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>22 Oct 2014</td>
+<td><a href="http://arxiv.org/abs/1212.5921">
+Distributed optimization of deeply nested systems
+</a></td>
+<td>M. Carrera-Perpinan, W. Wang</td>
+<td>Guest lec; Prasanna Muthukumar<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>27 Oct 2014</td>
+<td><a href="http://www.cs.utoronto.ca/~ilya/pubs/2012/HF_for_dnns_and_rnns.pdf">
+Training Deep and Recurrent Networks with
+Hessian-Free Optimization, ICML 2012
+</a></td>
+<td>J. Martens and I. Sutskever</td>
+<td>Simranjit Kohli<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://arxiv.org/pdf/1206.1106.pdf">
+No more pesky learning rates
+</a></td>
+<td>T. Schaul, S. Zhang, Y. Lecun</td>
+<td>Anurag Kumar<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>29 Oct 2014</td>
+<td><a href="http://eprints.pascal-network.org/archive/00008596/01/glorot11a.pdf">
+Deep Sparse Rectifier Neural Networks
+</a></td>
+<td>X. Glorot, A. Bordes, Y. Bengio</td>
+<td>Suyoun Kim<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://arxiv.org/pdf/1302.4389.pdf">
+Maxout Networks
+</a></td>
+<td>I. J. Goodfellow, D. Warde-Farley, M. Mirza, A. Courville, Y. Bengio</td>
+<td>Huiyung Li<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>3 Nov 2014</td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/1113/denoising_autoencoders_tr1316.pdf">
+Extracting and Composing Robust Features with Denoising Autoencoders
+</a></td>
+<td>P. Vincent, h. Larochelle, Y. Bengie, P.-A. Manzagol</td>
+<td>TB<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://deeplearning.cs.cmu.edu/pdfs/1127/hoyer_sparse.pdf">
+A multi-layer sparse coding network learns contour coding from natural images
+</a></td>
+<td>P. Hoyer and A. Hyvarinen</td>
+<td>Song Meng<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>At a future date</td>
+<td><a href="http://www.fit.vutbr.cz/~imikolov/rnnlm/thesis.pdf">
+Statistical Language Models based on Neural Networks
+</a></td>
+<td>Tomas Mikolov</td>
+<td>Jin Sun<br>
+<a href="slides.2014/xxx.pdf">[slides]</a></td>
+<td></td>
+</tr>
+</table>
+</html>
+
+<!----------
+
+
+<tr>
+<td> </td><td><a href="pdfs/Sanger.pdf">Optimal unsupervised learning in a single-layer linear feedforward neural network. Neural Networks 2 (6): 459.473, 1989.</a></td><td>T. Sanger</td><td>Khoa Luu<br><a href="notes/Slides_KLuu_Sep2013.pdf">[slides]</a><br><a href="code/GHL_Demo.m">[Khoa's GHL code]</a></td><td><a href="pdfs/OJA.pca.pdf">A simplified Neuron model as a principal component analyzer, by Erkki Oja</a></td>
+</tr>
+<tr>
+<td>16 Sep 2013</td><td><font color="blue"><a href="pdfs/Rumelhart.backprop.nature.pdf">Learning representations by back-propagating errors. Nature323(6088): 533.536</a></font></td><td><font color="blue">Rumelhart <i>et al.</i></font></td><td>Ahmed Hefny<br><a href="notes/hefny.pdf">[slides]</a></td>
+<td><a href="pdfs/Chap8_PDP86.pdf">Chapter by Rumelhart, Hinton and Williams</a><br>
+<a href="pdfs/Werbos.backprop.pdf">Backpropagation through time: what it does and how to do it., P. Werbos, Proc. IEEE 1990</a></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/Rprop.pdf">A Direct Adaptive Method for Faster Backpropagation  Learning: The RPROP Algorithm, IEEE Intl. Conf. on Neural Networks, 1993</td></a><td>M. Riedmiller, H. Braun</td><td>Danny (ZhenZong) Lan</td>
+<td></td>
+</tr>
+<tr>
+<td>18 Sep 2013</td><td><a href="pdfs/Hopfield.1982.pdf">Neural networks and physical systems with emergent collective computational abilities, Proc. Natl. Acad. Sciences, Vol 79, 2554-2558, 1982</a></td><td>J. J. Hopfield</td><td>Prasanna Muthukumar</td>
+<td></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/kohonen.SOM.pdf">The self-organizing map. Proc. IEEE, Vol 79, 1464:1480, 1990</td></a><td>Teuvo Kohonen</td><td>Fatma Faruq<br><a href="notes/fatmafaruq.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>23 Sep 2013</td><td><a href="pdfs/waibel89_TDNN.pdf">Phoneme recognition using time-delay neural networks,  IEEE trans. Acoustics, Speech Signal Processing, Vol 37(3), March 1989 </td></a><td>A. Waibel <i>et al.</i></td><td>Chen Chen<br><a href="notes/chenchen.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/Jaeger_RNN_tutorial.pdf">A tutorial on training recurrent neural networks, covering BPPT, RTRL, EKF and the "echo state network" approach, GMD Report 159, German National Research Center for Information Technology, 2002</td></a><td>Herber Jaeger</td><td>Shaowei Wang<br><a href="notes/shaoweiwang.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>25 Sep 2013</td><td><a href="pdfs/Schuster97_BRNN.pdf">Bidirectional recurrent neural networks, IEEE transactions on signal processing, Vol 45(11), Nov. 1997</td></a><td>M. Schuster and K. Paliwal</td><td>Felix Juefei Xu<br><a href="notes/BRNN_Felix_2013_09_25.pdf">[Slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/Hochreiter97_lstm.pdf">Long short-term memory. Neural Computation, 9(8):1735.1780, 1997</td></a><td>S. Hochreiter and J. Schmidhuber</td><td>Dougal Sutherland<br><a href="notes/lstm.pdf">[Slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>30 Sep 2013</td><td><a href="pdfs/Ackley_Hinton_Sejnowski.pdf">A learning algorithm for Boltzmann machines, Cognitive Science, 9, 147-169, 1985</td></a><td>D. Ackley, G. Hinton, T. Sejnowski</td><td>Siyuan<br><a href="notes/BM_siyuano.pdf">[Slides]</a> </td>
+<td></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/Xu_Oja.pdf">Improved simulated annealing, Boltzmann machine, and attributed graph matching, EURASIP Workshop on Neural Networks, vol 412,  LNCS, Springer, pp: 151-160, 1990</td></a><td>Lei Xu, Erkii Oja.</td><td>Ran Chen<br><a href="notes/ImprovedSA.RanChen.pdf">[Slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td>2 Oct 2013</td><td><a href="pdfs/Fukushima_Miyake.pdf">Neocognitron: A new algorithm for pattern recognition tolerant of deformations and shifts in position, Pattern Recognition Vol. 15(6), pp. 455-469, 1982</td></a><td>K. Fukushima, S. Miyake</td><td>Sam Thomson<br><a href="notes/neocognitron_slides_sthomson.pdf">[slides]</a></td>
+<td><a href="http://www.kiv.zcu.cz/studies/predmety/uir/NS/Neocognitron/en/index.html">[Figures in Sam's slides]</a><br><a href="pdfs/Barnard_Casasent.1990.pdf">Shift invariance and the Neocognitron, E. Barnard and D. Casasent, Neural Networks Vol 3(4), pp. 403-410, 1990</a></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/Lawrence_et_al.pdf">Face recognition: A convolutional neural-network approach, IEEE transactions on Neural Networks, Vol 8(1), pp98-113, 1997</td></a><td>S. Lawrence, C. L. Giles, A. C. Tsoi, A. D. Back</td><td>Hoang Ngan Le<br><a href="notes/CNN2.pdf">[Slides]</a></td> <td><a href="pdfs/Simard.pdf">Best Practices for Convolutional Neural Networks Applied to Visual Document Analysis, P.Y.Simard, D. Steinkraus, J.C. Platt, Prc. Document analysis and recognition, 2003</a><br>
+<a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf">Gradient based learning applied to document recognition, Y. LeCun, L. Bottou, Y. Bengio, P. Haffner. Proceedings of the IEEE, November 1998, pp. 1-43</a></td>
+</tr>
+<tr>
+<td>7 Oct 2013</td><td><a href="pdfs/Gori_Tesi.pdf">On the problem of local minima in backpropagation, IEEE tran. Pattern Analysis and Machine Intelligence, Vol 14(1), 76-86, 1992</a></td><td>M. Gori, A. Tesi</td><td>Jon Smereka<br><a href="notes/smereka.pdf">[slides]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/Bengio_94.pdf">Learning long-term dependencies with gradient descent is difficult, IEEE trans. Neural Networks, Vol 5(2), pp 157-166, 1994</td></a><td>Y. Bengio, P. Simard, P. Frasconi</td><td>Keerthiram Murugesan<br><a href="notes/keerthiram.pdf">[slides]</a></td>
+<td><a href="notes/hochreiter_2001.pdf">Gradient flow in recurrent nets: the difficulty of learning long-term dependencies, S. Hochreiter, Y. Bengio, P. Frasconi, J. Schmidhuber, in <i>A Field Guide to Dynamical Recurrent Neural Networks, IEEE Press</i>, 2001</a><br><a href="pdfs/Kolen_Pollack.pdf">Backpropagation is sensitive to initial conditions, J. F. Kolen and J. B. Pollack, Advances in Neural Information Processing Systems, pp 860-867, 1990 </a></td>
+</tr>
+<tr>
+<td>9 Oct 2013</td><td><a href="pdfs/Kornick_et_al.pdf">Multilayer feedforward networks are universal approximators, Neural Networks, Vol:2(3), 359-366, 1989</td></a><td>K. Hornik, M. Stinchcombe, H. White</td><td>Sonia Todorova<br><a href="notes/Sonia_Hornik.pdf">[slides]</a></td><td><a href="pdfs/Cybenko.pdf">Approximations by superpositions of a sigmoidal function, G. Cybenko, Mathematics of control, signals and systems, Vol:2, pp. 303-314, 1989</a><br><a href="pdfs/Funahashi.pdf">On the approximation realization of continuous mappings by neural networks, K. Funahashi, Neural Networks, Vol. 2(3), pp. 183-192, 1989</a><br><a href="pdfs/Barron.pdf">Universal approximation bounds for superpositions of a sigmoidal function, A. R. Barron, IEEE Trans. on Info. Theory, Vol 39(3), pp. 930-945, 1993</a><br>
+<a href="pdfs/2000-nn-benitez-nn-approximators.pdf">
+Neural networks with a continuous squashing function in the output are universal approximators, J.L. Castro, C.J. Mantas, J.M. Benitez, Neural Networks, Vol 13, pp. 561-563, 2000</a>
+</td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/Bengio_Delalleau_2011.pdf">On the expressive power of deep architectures, Proc. 14th intl. conf. on discovery science, 2011</td></a><td>Y. Bengio and O. Delalleau</td><td>Prasanna Muthukumar<br><a href="notes/Prasanna_deeparchitectures.pdf">[slides]</a></td>
+<td><a href="pdfs/Bengio_LeCunn.pdf">Scaling learning algorithms towards AI, Y. Bengio and Y. LeCunn, in <i>Large Scale Kernel Machines</i>, Eds. Bottou, Chappelle, DeCoste, Weston, 2007</a><br>
+<a href="pdfs/Delalleau_Bengio_2011.pdf">Shallow vs. Deep sum product networks, O. Dellaleau and Y. Bengio, Advances in Neural Information Processing Systems, 2011</a></td>
+</tr>
+<tr>
+<td>14 Oct 2013</td><td><a href="pdfs/Smolensky.1986.pdf">Information processing in dynamical systems: Foundations of Harmony theory; In <i>Parallel Distributed Processing: Explorations in the microstructure of cognition</i>, Rumelhart and McLelland eds., 1986</td></a><td>Paul Smolensky</td><td>Kathy Brigham<br><a href="notes/brigham_smolensky.pdf">[slides]</a></td>
+<td><a href="pdfs/Cueto_Morton_Sturmfels.2010.pdf">Geometry of the restricted Boltzmann machine, M. A. Cueto, J. Morton, B. Sturmfels, Contemporary Mathematics, Vol. 516., pp. 135-153, 2010</a></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/Wellings_Rosen_Hinton.2004.pdf">Exponential family harmoniums with and application to information retrieval, Advances in Neural Information Processing Systems (NIPS), 2004</td></a><td>M. Welling, M. Rosen-Zvi, G. Hinton</td><td>Ankur Gandhe<br><a href="notes/EFH_10_14_ankurgan.pdf">[slides]</a></td>
+<td><a href="pdfs/Chen_Murray.2003.pdf">Continuous restricted Boltzmann machine with an implementable training algorithm, H. Chen and A. F. Muray, IEE proceedings on Vision, Image and Signal Processing, Vol. 150(3), pp. 153-158, 2003</a><br>
+<a href="pdfs/Marks_Movellan.2001.pdf">Diffusion networks, product of experts, and factor analysis, T. K. Marks and J. R. Movellan, 3rd Intl. Conf. on Independent Component Analysis and Signal Separation, 2001</a></td>
+</tr>
+<tr>
+<td>16 Oct 2013</td><td><a href="http://arxiv.org/abs/1212.5921">Distributed optimization of deeply nested systems". Unpublished manuscript, Dec. 24, 2012, arXiv:1212.5921</td></a><td>M. Carrera-Perpi&ntilde;an and W. Wang</td><td>M. Carrera-Perpi&ntilde;an</td><td></td>
+</tr>
+<tr>
+<tr>
+<td>21 Oct 2013</td><td><a href="pdfs/Hinton_2002.pdf">Training products of experts by minimizing contrastive divergence, Neural Computation, Vol. 14(8), pp. 1771-1800, 2002</td></a><td>G. Hinton</td><td>Yuxiong Wang<br><a href="notes/yuxiong_CD.pdf">[slides]</a></td>
+<td><a href="pdfs/Perpinan_Hinton.2005.pdf">On contrastive divergence learning, M. Carrera-Perpin&ntilde;an, AI and Statistics, 2005</a><br>
+<a href="pdfs/Tieleman.2008.pdf">Training Restricted Boltzmann Machines using Approximations to the Likelihood Gradient, T. Tieleman, International conference on Machine learning (ICML), pp. 1064-1071, 2008</a><br>
+<a href="pdfs/Williams_Agakov.2002.pdf">An Analysis of Contrastive Divergence Learning in Gaussian Boltzmann Machines, Chris Williams, Felix Agakov, Tech report, University of Edinburgh, 2002</a><br>
+<a href="pdfs/Bengio_Delalleau.2007.pdf">Justifying and generalizing contrastive divergence, Y. Bengio, O. Delalleau, Neural Computation, Vol. 21(6), pp. 1601-1621, 2009</a></td>
+</tr>
+<tr>
+<td>23 Oct 2013</td>
+<td><a href="pdfs/Hinton_Osindero_fast.pdf">A fast learning algorithm for deep belief networks, Neural Computation, Vol. 18, No. 7, Pages 1527-1554, 2006.</a></td><td>G. Hinton, S. Osindero, Y.-W. Teh</td><td>Aaron Wise<br><a href="notes/wise_CD.pdf">[slides]</a></td><td>
+<a href="pdfs/Hinton_Science_2006.pdf">Reducing the dimensionality of data with Neural Networks, G. Hinton and R. Salakhutidnov, Science, Vol. 313. no. 5786, pp. 504 - 507, 28 July 2006</a></td>
+</tr>
+<tr>
+<td></td><td><a href="pdfs/Greedy_Bengio_2006.pdf">Greedy layer-wise training of deep networks, Neural Information Processing Systems (NIPS), 2007.</a></td><td>Y. Bengio, P. Lamblin, D. Popovici and H. Larochelle</td><td>Ahmed Hefny<br><a href="notes/hefny_Greedy.pdf">[slides]</a></td>
+<td><a href="pdfs/ranzato-nips06.pdf">Efficient Learning of Sparse Overcomplete Representations with an Energy-Based Model, M. Ranzato, C.S. Poultney, S. Chopra, Y. Lecunn, Neural Information Processing Systems (NIPS), 2006.</a></td>
+</tr>
+<tr>
+<td>28 Oct 2013</td>
+<td><a href="pdfs/1028/ImageNet.pdf">Imagenet classification with deep convolutional neural networks, NIPS 2012</a></td><td>A. Krizhevsky, I. Sutskever, G. Hinton</td><td>Danny Lan</td>
+<td><a href="pdfs/1028/3D_Classification.pdf">Convolutional recursive deep learning for 3D object classification, R. Socher, B. Huval, B. Bhat, C. Manning, A. Ng, NIPS 2012</a><br>
+<a href="pdfs/1028/Multi-Column.pdf">Multi-column deep neural networks for image classification, D. Ciresan, U. Meier and J. Schmidhuber, CVPR 2012</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/1028/Conv_Hierarchies.pdf">Learning hierarchial features for scene labeling, IEEE transactions on pattern analysis and machine intelligence, Vol 35(8), pp. 1915-1929, 2012</a></td><td>C. Couprie, L. Najman, Y. LeCun</td><td>Jon Smereka</td>
+
+<td><a href="pdfs/1028/Scene_Labeling.pdf">Learning convolutional feature hierarchies for visual recognition, K. Laukcuoglu,P. Sermanet, Y-Lan Boureau, K. Gregor, M. Mathieu, Y. LeCun, NIPS 2010</a></td>
+</tr>
+<tr>
+<td>30 Oct 2013</td>
+<td><a href="pdfs/1030/Mikolov_Thesis.pdf">Statistical language models based on neural networks, PhD dissertation, Brno, 2012, chapters 3 and 6</a></td><td>T. Mikolov,</td> <td>Fatma Faruq</td> <td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/1030/Sentiment_Prediction.pdf">Semi-supervised recursive autoencoders for predicting sentiment</a></td><td>R. Socher, J. Pennington, E. Huang, A. Ng and C. Manning</td> <td>Yueran Yuan</td> <td><a href="pdfs/1030/Paraphrase_Detection.pdf">Dynamic pooling and unfoloding recursive autoencoders for paraphrase detection, R. Socher, E. Huang, J. Pennington, A. Ng, C. Manning, EMNLP 2011</a><br>
+<a href="pdfs/1030/Open-Text_Parsing.pdf">Joint learning of words and meaning representation for open-text semantic parsing, A.Bodes, X. Glorot, J. Weston, Y. Bengio, AISTATS 2012</a></td>
+</tr>
+<tr>
+<td>4 Nov 2013</td>
+<td><a href="pdfs/1104/Supervised_Sequence_Labeling.pdf">Supervised sequence labelling with recurrent neural networks, PhD dissertation, T. U. Munchen, 2008, Chapters 4 and 7</a></td><td>A. Graves,</td> <td> Georg Schoenherr</td> <td><a href="pdfs/1104/RNN13.pdf">Speech recognition with deep recurrent neural networks, A. Graves, A.-. Mohamed, G. Hinton, ICASSP 2013</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/1104/Acoustic_Modeling.pdf">Deep neural networks for acoustic modeling in speech recognition: the shared view of four research groups, IEEE Signal Processing Magazine, Vold 29(6), pp 82-97, 2012.</a></td><td>G. Hinton et al.</td> <td>Daniel Maturana<br><a href="notes/maturana.asr.pdf">[slides]</a></td> <td></td>
+</tr>
+<tr>
+<td>6 Nov 2013</td>
+<td><a href="pdfs/1106/Modeling_documents.pdf">Modeling Documents with a Deep Boltzmann Machine, UAI 2013</a></td><td>N. Srivastava, R. Salakhutidinov, G. Hinton</td> <td>Siyuan</td> <td><a href="pdfs/1106/LANG-RNN.pdf">Generating text with Recurrent Neural Networks, I. Sutskever, J. Martens, G. Hinton, ICML 2011</a>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/1106/Word_Representations.pdf">Word representations: A simple and general method for semi-supervised learning, ACL 2010</a></td><td>J. Turian, L. Ratinov, Y. Bengio</td> <td>Sam Thomson<br><a href="notes/sthomson_word_representations_slides.pdf">[slides]</a></td> <td></td>
+</tr>
+
+<tr>
+<td>11 Nov 2013</td>
+<td><a href="pdfs/1111/empirical_larochelle.pdf">
+An empirical evaluation of deep architectures on problems with many factors or variables, ICML 2007
+</a></td><td>
+H. Larochelle, D. Erhan, A. Courville, J. Bergstra, Y. Bengio
+</td> <td>Ran Chen</td> <td></td>
+</tr>
+
+<tr>
+<td></td>
+<td><a href="pdfs/1111/AISTATS09_ErhanMBBV.pdf">
+The Difficulty of Training Deep Architectures and the Effect of Unsupervised Pre-Training, AISTATS 2009
+</a></td><td>
+D. Erhan, P.-A. Manzagol, Y. Bengio, S. Bengio, P. Vincent
+</td> <td>Ankur Gandhe</td> <td></td>
+</tr>
+
+<tr>
+<td>13 Nov 2013</td>
+<td><a href="pdfs/1113/denoising_autoencoders_tr1316.pdf">
+Extracting and Composing Robust Features with Denoising Autoencoders, ICML 2008
+</a></td><td>
+P. Vincent, H. Larochelle, Y. Bengio, P.-A. Manzgool
+</td> <td>Pallavi Baljekar</td> <td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/1113/dropout_hinton.pdf">
+Improving neural networks by preventing co-adaptation of feature detectors,
+</a></td><td>
+G.E. Hinton, N. Srivastava, A. Krizhevsky, I. Sustskever, R. R. Salakhutdinov
+</td> <td>Subhodeep Moitra<br><a href="notes/subhodeep_dropout.pdf">[slides]</a></td> <td></td>
+</tr>
+<tr>
+<td>18 Nov 2013</td>
+<td><a href="pdfs/1118/Magic_working_paper_May6_2013.pdf">
+A theory of deep learning architectures for
+sensory perception: the ventral stream, 
+</a></td><td>
+Fabio Anselmi, Joel Z Leibo, Lorenzo Rosasco, Jim Mutch, Andrea Tacchetti, Tomaso Poggio
+</td> <td>Dipan Pal</td> <td></td>
+</tr>
+<tr>
+<td>20 Nov 2013</td>
+<td><a href="pdfs/1120/lecun_pesky_learning_rates.pdf">
+No more pesky learning rates, ICML 2013
+</a></td><td>
+Tom Schaul, Sixin Zhang and Yann LeCun
+</td> <td>Georg Shoenherr</td> <td><a href="pdfs/1120/lecun_pesky_learning_rates.supplement.pdf">No more pesky learning rates: supplementary material</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/1120/initialization_momentum.pdf">
+On the importance of initialization and momentum in deep learning, JMLR 28(3): 1139.1147, 2013
+</a></td><td>
+Ilya Sutskever, James Martens, George Dahl, Geoffrey Hinton
+</td> <td>Kartik Goyal</td>
+<td><a href="pdfs/1120/initialization_momentum.supplement.pdf">
+Supplementary  material for paper
+</a></td>
+</tr>
+<tr>
+<td>25 Nov 2013</td>
+<td><a href="pdfs/1125/xxx.pdf">
+Guest lecture
+</a></td><td>
+Quoc Le
+</td> <td></td> <td></td>
+</tr>
+<tr>
+<td>2 Dec 2013</td>
+<td><a href="http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Glorot_342.pdf">
+Domain Adaptation for Large-Scale Sentiment Classification: A Deep Learning Approach, ICML 2011
+</a></td><td>Xavier Glorot, Antoine Bordes, Yoshua Bengio </td>
+<td>Dougal Sutherland</td>
+<td><a href="http://arxiv.org/abs/1206.4683">Marginalized Denoising Autoencoders for Domain Adaptation,M. Chen, Z. Xu, K. Weinberger, F. Sha, ICML 2012</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://jmlr.org/proceedings/papers/v27/bengio12a/bengio12a.pdf">
+Deep Learning of Representations for Unsupervised and
+Transfer Learning, MLR: Workshop and Conference Proceedings 27:17{37, 2012)
+</a></td><td>Yoshua Bengio</td>
+<td>Yuxiong Wang</td>
+<td></td>
+</tr>
+<tr>
+<td>4 Dec 2013</td>
+<td><a href="http://static.googleusercontent.com/media/research.google.com/en/us/archive/unsupervised_icml2012.pdf">
+Building High-level Features Using Large Scale Unsupervised Learning, ICML 2012
+</a></td><td>Q. Le, M. Ranzato, R. Monga, M. Devin, K. Chen, G. Corrado, J. Dean, A. Ng.</td>
+<td>Chen Chen</td>
+<td>
+<a href="http://static.googleusercontent.com/media/research.google.com/en/us/archive/large_deep_networks_nips2012.pdf"> Large scale distributed deep networks, J. Dean, G. Corrado, R Monga, K. Chen, M. Devin, Q. Le, M. Mao, M. Ranzato, A. Senior, P. Tucker, K. Yang, A. Ng, NIPS 2012</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://robotics.stanford.edu/~ang/papers/icml09-LargeScaleUnsupervisedDeepLearningGPU.pdf">
+Large-scale Deep Unsupervised Learning using Graphics Processors, ICML 2009
+</a></td><td>R. Raina, A. Madhavan, A. Ng.</td>
+<td>Keerthiram Murugesan</td>
+<td> </td>
+</tr>
+<tr>
+<td>Suggested additional readings</td>
+<td><a href="pdfs/1127/hoyer_sparse.pdf">
+A multi-layer sparse coding network learns contour coding from natural images
+Neural Networks Research Centre, Vision Research 42(12): 1593-1605, 2002
+</a></td><td>
+Patrik O. Hoyer and Aapo Hyvarinen
+</td> <td></td> <td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/1127/lecun_sparse.pdf">
+Sparse Feature Learning for Deep Belief Networks, NIPS 2007 
+</a></td><td>
+Marc.Aurelio Ranzato Y-Lan Boureau, Yann LeCun
+</td> <td></td> <td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/1127/sparse_andrew.pdf">
+Sparse deep belief net model for visual area V2, NIPS 2007
+</a></td><td>
+Honglak Lee Chaitanya Ekanadham Andrew Y. Ng
+</td> <td></td> <td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="pdfs/1127/sparse_rectifier.pdf">
+Deep Sparse Rectifier Neural Networks, JMLR 16: 315-323, 2011
+</a></td><td>
+Xavier Glorot, Antoine Bordes, Yoshua Bengio
+</td> <td></td> <td></td>
+</tr>
+
+<tr>
+<td>To be arranged</td>
+<td><a href="pdfs/1111/jmlr10_larochelle.pdf">
+Exploring strategies for training deep neural networks, Journal of Machine Learning Research, Vol. 1, pp 1-40, 2009
+</a></td><td>
+H. Larochelle, Y. Bengio, J. Louradour, P. Lamblin
+</td> <td></td> <td></td>
+</tr>
+
+<tr>
+<td></td>
+<td><a href="pdfs/1111/AISTATS2010_Erhan.pdf">
+Why Does Unsupervised Pre-training Help Deep Learning?, AISTATS 2010
+</a></td><td>
+D. Erhan, A. Courville, Y. Bengio, P. Vincent
+</td> <td></td> <td></td>
+</tr>
+
+<tr>
+<td></td>
+<td><a href="pdfs/1111/AISTATS2010_Glorot.pdf">
+Understanding the difficulty of training deep feedforward neural networks,  AISTATS 2010
+</a></td><td>
+X. Glorot and Y. Bengio
+</td> <td></td> <td></td>
+</tr>
+
+<tr>
+<td></td>
+<td><a href="pdfs/1111/livni_provablyefficient.pdf">
+A Provably Efficient Algorithm for Training Deep Networks, arXiv:1304.7045 [cs.LG], 2013
+</a></td><td>
+R. Livni, S. Shalev-Schwartz, O. Shamir
+</td> <td></td> <td></td>
+</tr>
+</table>
+</html>
+

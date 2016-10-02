@@ -1,0 +1,12 @@
+BODY, DD, TH, TD, I, B, EM, STRONG { font-family: sans-serif; }
+A:link { color: blue;}
+A:visited { color: #CC00CC; }
+A:active { color: blue; } 
+TH { vertical-align: top; }
+TD { vertical-align: top; }
+TD.sidebar { background: #cccccc; } 
+TD.main { background: #FFFFFF; }   
+TD.small { font-size: small; }     
+TD.menu { font-size: x-small; padding: .3ex 0ex;}
+TD.submenu { font-size: x-small; }
+DT { padding: 1ex 0ex; }           
