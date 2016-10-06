@@ -1,0 +1,46 @@
+<P ALIGN=CENTER>
+<html>
+<HEAD><TITLE>11-785 DEEP LEARNING</TITLE></HEAD>
+<BODY  BGCOLOR="#FFFFFF" TEXT="#00007F" Font="Garamond"
+ VLINK="#007fff" LINK="#7f7f7f" ALINK="#e0ffd0">
+
+<center><H1>Deep Learning Labs</h1>
+</center>
+<p> We will have several lab exercises. Some of them will exercise basic NNet implementation. The rest will explore new, potentially publishable ideas.
+
+<p> Although we have listed speech, text and images as primary data platforms for our exercises, this may change (e.g. to DNA strings) provided we get a sufficiently large dataset.
+<h3> Back Propagation</h3>
+<p> In this exercise you must
+<ol>
+<li> Implement back propagation </li>
+<li> Model a variety of simple convex and non-convex classification boundary problems in two dimensions</li>
+<li> Visualize the output of each unit in the network under various settings</li>
+<li> Visualize and evaluate the features learned by intermediate units, their capacity to represent, and their limitations.</li>
+</ol>
+<a href='homeworks/HW1.tar.gz'> Link to HW1 </a> 
+<h3> Autoencoding and pretraining</h3>
+<p> Here we will investigate autoencoders, and the use of autoencoders for initialization. We will test these out on two large tasks: speech and images.
+<p>
+<a href='homeworks/HW2.pdf'> Link to HW2 </a> 
+<h3> Denoising, dropout</h3>
+<p> Here we will investigate the effect of denoising and dropout on training robust networks. We will perform our investigation on speech and images.
+<h3> RBM and DBM vs NN and DNN</h3>
+<p> Here we will compare generative models, namely RBMs and DBMs to conventional feed-forward networks. We will investigate a number of tasks including images and text.
+<h3> Convolutive Networks</h3>
+<p> We will investigate convolutive neural networks for image and speech classification.
+<h3> Recurrent formulations of networks: RNN, LSTM</h3>
+<p> We will compare uni- and bi-directional RNNs and LSTMs on speech and language tasks.
+<h3> Explorations</h3>
+<p> These are a series of explortive projects, which will be included as part of the other projects listed above. They will not all be mandatory. However, interesting results in these projects may be publishable.
+<ol>
+<li> <b>Inverting the network: Null spaces.</b> Even the best trained networks can be &ldquo;fooled&rdquo; into making absurd classifications, e.g. classifying a bicycle as a lion. We will investigate how this can be done and potential solutions to prevent semantically undesirable misclassification.
+<li> <b>Max L<sub>1</sub> regularization vs dropout.</b> Dropout is an ad-hoc technique for improving the richness of features coded by neurons. A more rigorous approach to doing the same is through maximization of L<sub>1</sub> norms of network weights. We will investigate this.
+<li> <b>Spatially coherent networks.</b> The human brain has a curious features -- neurons that code for similar features tend to spatially localized. We hypothesize that this may lead to robustness through redundancy. We will investigate methods of imposing similar spatial coherence in artificial neural networks.
+<li> <b>Pruning networks.</b> Here we will investigate mechanisms that enable us to <i>prune</i> trained networks through careful elimination of neurons based on expected effect on performance. This may lead to both, networks with superior generalization and a mechanism by which a user may scale the size of a pre-trained network to fit their computational resources, with minimal effect on performance.
+<li> <b>Deep dictionaries.</b> Here we will explore how the decoder in autoencoders may be viewed as &ldquo;dictionaries&rdquo; and could potentially be used to derive crisp representations, and enable signal denoising and reconstruction.
+<li> <b>Quantized nets.</b> How best do we <i>quantize</i> the weights of a networks for the most effective representation in silicon.
+<li> <b>Text to images.</b> Can we automatically generate a comic strip given a short story?
+<li> <b>Explorations of embeddings.</b> &ldquo;Embeddings&rdquo; are increasingly derived to convert discrete symbol sets (e.g. words) into continuous-valued vector representations. We will investigate mechanisms for imposing semantics on such embeddings, including whether they can be regular submodular functions.
+</ol>
+
+</html>

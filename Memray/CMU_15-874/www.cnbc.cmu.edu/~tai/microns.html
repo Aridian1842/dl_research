@@ -1,0 +1,493 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+        "http://www.w3.org/TR/REC-html40/loose.dtd">
+
+<STYLE TYPE="text/css">
+<!--
+BODY {	
+		font-family: times;
+	 }
+-->
+</STYLE>
+
+<html>
+
+<head>
+  <title>(15-874) Machine Learning from Neural Cortical Circuits  </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+
+<body>
+
+<h2>15-874 Machine Learning from Neural Cortical Circuits </h1>
+
+<h3>Carnegie Mellon University</h2>
+
+<h3>Spring 2016.  </h2>
+
+<h3>Course Description</h3>
+
+In the last few years, deep learning methods based on convolutional neural networks have produced state-of-the-art performance in object and speech recognition. These neural networks have also been found to provide a reasonable approximation for the neural representations in the primate visual systems.  Yet, real biological neural networks are far more intricate and complex than the current neural networks. For example, only 5% of the synapses of a neuron in the real network in the visual cortex listen to bottom-up input signals yet current neural networks are primarily concerned with feed-forward computation. What are the functions of the other 95% of the synapses of a neuron?  What could be the computational roles of the recurrent connections in the real biological circuits?  What other learning rules are known or implementable in the real circuits? Can we develop new computational vision models and machine learning techniques from our knowledge of the cortical neural circuits? We will study current relevant machine learning, computer vision and biological papers to explore the answers to these questions. Students of all levels, from undergraduates to Ph.D. students are welcome, though priority will be given to more senior students. The course will involve paper presentation and discussion, research term projects by students, and lecture presentation by professors. 
+NOTE: Although we have not imposed prerequisites, the course is intended for students with some background in machine learning and neural computation, who are doing or are interested in doing related research. You should contact the instructor to see whether it is appropriate for you to enroll, or we can decide at the beginning of the course.  
+
+
+<p>
+
+<h3>Course Information</h3>
+
+<table border="1" style="margin: 0px 0px 0px 20px;">
+  <thead align="left">
+	<tr>
+	  <th>Instructors</th> <th>Office (Office hours)</th> <th>Email (Phone)</th>
+	 </tr>
+  </thead>
+<tbody>
+  <tr>
+	<td>Tai Sing Lee (Professor)</td> <td>Mellon Inst. Rm 115 (office hour anytime or by appt) </td> <td>tai@cnbc.cmu.edu (412-268-1060)</td>
+  </tr>
+</tbody>
+</table>
+
+<ul>
+
+<li><b>Class location and time:</b> Friday 1:00-3:00 p.m. Mellon Institute Rm 115 Conference Room  </li>
+<li><b>Small group meeting:</b> We will set up time for individual and small group meetings at MI during the week. </li>
+
+<li><b>Blackboard:</b> http://www.cmu.edu/blackboard/ (Students in all sections should use the same BB for access of course materials, grade center and announcements.  
+</li> 
+</ul>
+
+<h3>Paper Presentation (60 percent of the grade)</h3>
+
+<ul>
+<li> Presentation:  
+Each regular class in the course will be a series of papers on a particular topic presented by two students. As presenter, you will be expected to have read the papers listed for the day (including any available code) that are assigned to you, present them, and lead a discussion. Discuss with at least one week before the presentation and then by Wed the week of presentation.
+</li>
+
+<li>
+Paper Critic:  
+Each regular class in the course will also have one or two designated "critics." As a critic, your job is to read the chosen paper and review it: list strengths and weaknesses, and start the discussion on the blog. You will post your review on the blog (24 hrs before the class) and then raise points from your review during discussion. The blog is currently a blackboard forum.
+</li>
+
+<li>
+Summaries and  Blog
+For each regular class, everyone is required to make at least one post on the blog. For the blog, don't just summarize the paper; point out something others might have missed, give a critique, or respond to someone else's post. Alternatively, you can act as a critic, pose a question for the presenter 24 hours before the class. You can miss up to three blog postings in a semester.
+</li>
+</ul>
+
+<h3>Term research project (40 percent of the grade)</h3>
+
+<ul>
+<li>  
+You are required to develop a project related to the MICrONS issues with me or by yourselves and discussed with and approved by me. You can work in a team of 2 or 3 students. 
+</li>
+
+<li>
+A project does not have to "work" in order to get a good grade.
+But it requires a significant amount of work (remember this is a 12-unit class...)
+You will need to produce a polished report/presentation, the sort that you would be willing to publish/present at a conference.
+</li>
+
+<li>
+Feb 12, 11:59PM: One page Project Proposal Due
+</li>
+<li>
+Mar 25: Mid-term Presentations
+</li>
+<li>
+May 5-10:  Final Project Presentations
+</li>
+
+</ul>
+
+<h3>Week 1 (Jan 22) Vision and the Visual System  </h3>
+
+<ul> 
+<li> We will give an overview of the visual system, particularly that of the primary visual cortex of cats and monkeys. We will also give an overview of the key computaitonal ideas and philosophy. Recommended reading to get you started:  
+</li> 
+<li>  
+<span class="c8"><a href="http://faculty.washington.edu/jpalmer/files/Teller/ByChapter/tellerChapter16.pdf" >   Teller, D. (2014) Chapter 16. Area V1: Primary Visual Cortex </a> <em> 
+<span class="c8"><a href="http://faculty.washington.edu/jpalmer/files/Teller/tellerbook.pdf" >   Vision and the Visua System </a>  
+</em> Chapter 16 and 17 in particular.  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="http://ling.umd.edu/~idsardi/728/Marr/Marr%20'Vision'%20Ch%201.pdf" >   Marr, D.  (1982) Chapter 1: The Philosophy and the Approach </a> <em> Vision </em> 8-38 .  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7150551" >   Lee, T.S. (2015) The Visual System's Internal Models of the World </a> <em> Proceedings of the IEEE  </em> Vol 103, issue 8, 1359-1378.  </span></li>
+</li>
+
+</ul>
+
+<h3>Week 2 (Jan 29) Sparse and predictive coding </h3>
+
+<ul> 
+<li> We will discuss the basic theories of sparse coding and predictive coding. Later on, we will read more papers on the neural mechanisms and computaitonal models related to these two principles. 
+</li> 
+<li>  
+<span class="c8"><a href="microns_papers/Mumford_BiolCyb-journal.pdf" >  Mumford, D (1992) On the computational architecture of the neocortex  </a> <em> Biological Cybern.  
+</em> 66: 241-251.  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="microns_papers/Olshausen-nature-paper.pdf" >   Olshausen and Field (1996)  Emergence of simple-cell receptive field properties by learning a sparse code for natural images </a> <em> Nature </em> 381: 607-609.  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="microns_papers/rao_ballard.pdf" > Rao and Ballard (1998) Predictive coding in the visual cortex: a functional interpretation of some oextra-classical receptive field effects  </a> <em> Nature Neuroscience
+</em> 2(1): 79-87.  </span></li>
+</li>
+
+</ul>
+
+
+<h3>Week 3 (Feb 5) Compositional theory </h3>
+
+<ul> 
+<li> Liu Chen (1,2) and Senthil (3) present. 
+</li> 
+<li>  
+<span class="c8"><a href="microns_papers/elie_nips97.pdf" >  E. Bienenstock, S. Geman, and D. Potter. Compositionality, MDL Priors, and Object Recognition </a> <em> NIPS Advances in Neural Information Processing Systems 9. 
+</em> 1998.  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="microns_papers/zhu_yuille_2008.pdf" > L. Zhu, C. Lin, H. Huang, Y. Chen, A.L. Yuille. Unsupervised Structure Learning: Hierarchical Recursive Composition, Suspicious Coincidence and Competitive Exclusion. </a> <em> Proceedings of the European Conference on Computer Vision. ECCV. (see also another paper by Zhu and Yuille with Bill Freeman.)
+</em> 2008.  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="microns_papers/LakeEtAl2015Science.pdf" > Lake, B., Salakhutdinvo, R., Tenenbaum, J. (2016) Human-level conceptual learning through probabilistic program induction. </a> <em>Science, 350 (6266): 1332-1338. 
+</em> 2015.  </span></li>
+</li>
+
+<h4>Supplementary (long-term) reading </h4>
+
+<li>  
+<span class="c8"><a href="microns_papers/geman_hierarchy1998.pdf" >  S. Geman, Hierarchy in machine and natural vision.</a> <em> Proceedings of the 11th Scandinavian Conference on Image Analysis, 
+</em> 1999.  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="microns_papers/yuille2011_composition.pdf" > Yuille. Towards a Theory of Compositional Learning and Encoding of Objects </a> <em> 1st IEEE Workshop in Information Theory in Computer Vision and Pattern Recognition. ICCV
+</em> 2011.  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="http://www.stat.ucla.edu/~sczhu/papers/Reprint_Grammar.pdf" > S.C. Zhu and D. Mumford (2006)  A Stochastic Grammar of Images </a> <em> Foundations and Trends in Computer Graphics and Vision </em> 2(4): 259-362.  </span></li>
+</li>
+</ul>
+
+
+<h3>Week 4 (Feb 12) More on composition and neural evidence of sparse coding </h3>
+
+<ul> 
+<li> Xiaolong Wang (1) Jay Jin and Jack Paparian (2,3)   
+</li> 
+<li>  
+<span class="c8"><a href="microns_papers/Wang_Incorporating_Structural_Alternatives_2013_CVPR_paper.pdf" >Wang, X., Lin, L., Huang, L., Yan, S. Incorporating structural alternatives and sharing into hierarchy for multiclass object recognition and detection  </a> <em> CVPR 
+</em> 2013  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="http://www.cnbc.cmu.edu/~samondjm/papers/VinjeandGallant2000.pdf" > Vinje, W.E., Gallant, J.L. Sparse Coding and Decorrelation in Primary Visual Cortex During Natural Vision,  </a> <em> Science  
+</em> Vol. 287, Issue 5456, pp. 1273-1276.  </span></li>
+</li>
+<li>  
+<span class="c8"><a href="http://www.cnbc.cmu.edu/~samondjm/papers/Welikyetal2003.pdf" >  Weliky, M, Fiser, J., Hunt, R.H., Wagner, D.D. (2003) Coding of natural scenes in primary visual cortex  </a> <em> Neuron </em> 37, 703-718.  </span></li>
+</li>
+
+<h4>Supplementary (background) reading for compositionality  </h4>
+
+
+<li>  
+<span class="c8"><a href="microns_papers/Rothrock_Human_Parsing_SIG11.pdf" > Rothrock, B. and Zhu, S.C. Human Parsing using stochastic AND-OR grammars and rich appearances  </a> <em>  Int'l Workshop on Stochastic Image Grammar (SIG), Barcelona, Spain, 2011  
+</em> 2011  </span></li>
+</li>
+
+<li>  
+<span class="c8"><a href="microns_papers/zhu_AOTpami.pdf" > Si Z. and Zhu S-C. Learning AND-OR Templates for object recognition and detection   </a> <em> IEEE Trans on Pattern Analysis and Machine Intelligence 
+</em> vol. 35, no.9, 2189-2205, 2013.  </span></li>
+</li>
+</li>
+</ul>
+
+
+<h3>Week 5 (Feb 19) More neural evidence of sparse coding </h3>
+
+<ul> 
+<li> Summer (1) Allison (2) Zhimeng (supplementary) 
+</li> 
+<li>  
+<span class="c8"><a href="http://jackknife.med.yale.edu/mlab/pdfs/haider2010.pdf" > Haider, B., Krause, M.R., Duque, A., Yu, Y., Touryan, J., Mazer, J.A., McCormick, D.A. (2010) Synaptic and network mechanisms of sparse and reliable visual cortical activity during nonclassical receptive field stimulation </a> <em> Neuron
+</em> 65: 107-121.  </span></li>
+</li>
+
+<li>  
+<span class="c8"><a href="http://bethgelab.org/media/publications/Froudarakis_et_al_2014.pdf" > Froudarakis E., Berens P., Ecker A.S., Cotton R.J., Sinz F.H., Yatsenko D., Saggau P., Bethge M., Tolias A.S. (2014). Population code in mouse V1 facilitates read-out of natural scenes through increased sparseness. 
+</a> <em> Nature Neuroscience. 17(6), 851-7. 
+</em> 2014.  </span></li>
+</li>
+
+<h4>Supplementary (background) reading for sparse coding models </h4>
+
+<li>  
+<span class="c8"><a href="http://siplab.gatech.edu/pubs/charlesNECO2012.pdf" > A.S. Charles, P. Garrigues and C.J. Rozell. A Common Network Architecture Efficiently Implements a Variety of Sparsity-based Inference Problems  </a> <em> Neural Computation, 
+</em> 24(12), pp. 3317–3339, December 2012.</span></li>
+</li>
+
+<li>  
+<span class="c8"><a href="http://www.worldscientific.com/doi/abs/10.1142/S0129065714400012" > S. Shapero, M. Zhu, P. Hasler and C.J. Rozell (2014) Optimal Sparse Approximation With Integrate and Fire Neurons </a> <em> International Journal of Neural Systems, 
+</em> 25(8), pp. 1595–1596, August 2014.</span></li>
+</li>
+
+<li>  
+<span class="c8"><a href="http://siplab.gatech.edu/pubs/rozellNeuralComp2008.pdf" > C.J. Rozell, D.H Johnson, R.G. Baraniuk and B.A. Olshausen </a> <em> Neural Computation 
+</em>  pp. 2526–2563, October 2008. </span></li>
+</li>
+
+</ul>
+
+
+<h3>Week 6 (Feb 26) Sparse coding circuits and overview on biological learning rules </h3>
+
+<ul> 
+<li> Yimeng (1,2) Faisal (3,4) and Zhihao (5).  
+</li> 
+
+<li>  
+<span class="c8"><a href="microns_papers/DeWeese2011PLOS.pdf" > Joel Zylberberg, Jason Timothy Murphy, Michael Robert DeWeese, A Sparse Coding Model with Synaptically Local Plasticity and Spiking Neurons Can Account for the Diverse Shapes of V1 Simple Cell Receptive Fields  </a> <em> PLoS Computational Biology
+</em> Volume 7, Issue 10,  e1002250, 2011 </span></li>
+</li>
+
+<li>  
+<span class="c8"><a href="microns_papers/DeWeese-EInet2013.pdf" > Paul D. King, Joel Zylberberg, and Michael R. DeWeese, Inhibitory Interneurons Decorrelate Excitatory Cells to Drive Sparse Code Formation in a Spiking Model of V1 </a> <em>  Journal of Neuroscience
+</em> 33(13): 5475-5485, 2013.  </span></li>
+</li>
+
+<li>  
+<span class="c8"><a href="microns_papers/Feldman_danial_review_2009.pdf"> Daniel E. Feldman, Synaptic Mechanisms for Plasticity in Neocortex </a> <em>  Annual Review of Neuroscience 
+</em> (2009) Vol. 32: 33-55.  </span></li>
+</li>
+</li>
+
+<li>  
+<span class="c8"><a href="microns_papers/Froemke_annual_review_2015.pdf" > Robert C. Froemke, Plasticity of Cortical Excitatory-Inhibitory Balance </a> <em>  Annual Review of Neuroscience 
+</em> (2015), Vol. 38: 195-219 </span></li>
+</li>
+</li>
+
+<li>  
+<span class="c8"><a href="microns_papers/Turrigiano_2011_AnnReview.pdf" > Turrigiano, Gina G. "Too many cooks? Intrinsic and synaptic homeostatic plasticity in neocortical circuit function." </a> <em>  Annual Review of Neuroscience 
+</em> 34. (2011): 89-103.  </span></li>
+</li>
+</li>
+</ul>
+
+
+
+<h3>Week 7 (March 1) Overview on Cortical circuits </h3>
+
+<ul> 
+<li> Jack and Jay (1,2,3) 
+</li> 
+<li>  
+<span class="c8"><a href="microns_papers/Science-2015-Jiang-.pdf" > Jiang X, Shen S, Cadwell CR, Berens P, Sinz F, Ecker AS, Patel S & Tolias AS (2015). Principles of Connectivity among Morphologically Defined Cell Types in Adult Neocortex. </a> <em> Science  
+</em> Vol. 350 no. 6264.  
+<span class="c8"><a href="http://www.cnbc.cmu.edu/~tai/microns/Jiang-SM.pdf" > Supplementary materials </a>
+</span></li>
+</li>
+<li>  
+<span class="c8"><a href="microns_papers/douglas_martin2007.pdf" >  Rodney J. Douglas and Kevan A.C. Martin, (2007)  Mapping the Matrix: The Ways of Neocortex.  </a> <em> Neuron </em> 56: 226-238.  
+<span class="c8"><a href="microns_papers/douglas_martin_current_biology2007.pdf" > Supplementary paper: Current Biology, also Douglas and Kevan A.C. Martin</a> 
+</span></li>
+</li>
+</ul>
+
+<h3>Week 8 (March 18) Machine Learning on cortical circuits and LSTM </h3>
+<ul> 
+<li> Jack and Jay (1) Faisal (2)
+</li> 
+
+<li>  
+<span class="c8"><a href="http://cdn.elifesciences.org/elife-articles/04250/pdf/elife04250.pdf" > Eric Jonas, Konrad Kording (2015) Automatic discovery of cell types and microcircuitry from neural connectomics </a> <em>E-life 
+</em> 4:e04250. 1-21. </span></li>
+<li>  
+<span class="c8"><a href="http://arxiv.org/pdf/1502.04681.pdf" > Nitish Srivastava Elman Mansimov Ruslan Salakhutdinov (2015) Unsupervised Learning of Video Representations using LSTMs </a> <em> ICML 
+</em>  http://arxiv.org/abs/1502.04681 </span></li>
+
+<h4>Supplementary (background) </h4>
+
+<li>  
+<span class="c8"><a href="http://arxiv.org/pdf/1502.04623.pdf" > K. Gregor, I Danihelka, A. Graves, D.J. Rezende, D. Wierstra, Draw: A recurrent neural network for image generation  </a> <em> Archived, 
+</em> arxiv: 1502.04623.</span></li>
+</li>
+
+</li>
+</ul>
+
+<h3>Week 9 (April 1) Prediction Models </h3>
+<ul> 
+<li> Bojian Han (1), Senthil (2)  
+</li> 
+
+
+<li>  
+<span class="c8"><a href="http://arxiv.org/pdf/1511.06380.pdf" > William Lotter, Gabriel Kreiman & David Cox (2016) Unsupervised Learning of Visual Structure Using Predictive Generative Networks </a> <em> http://arxiv.org/pdf/1511.06380.pdf.
+</em> ICLR sumbmission. </span></li>
+
+<li>  
+<span class="c8"><a href="IN_Blackboard.pdf" > Pose from Action: Unsupervised Learning of 
+Pose Features based on Motion </a> <em>  In Blackboard course material folder 
+</em>  Submitted ECCV </span></li>
+
+
+</li>
+</ul>
+<h3>Week 10 (April 8) Predictive and efficient models in balanced networks  </h3>
+<ul> 
+<li> Allison Fiser (1), Senthil (2)  
+</li> 
+
+
+<li>  
+<span class="c8"><a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003258" > Martin Boerlin, Christian Machens, Sophie Deneve: Predictive coding of dynamic variables in balanced spiking networks </a> <em> PLOS Computational Biology 
+</em> 2013. 9(11).  1-15.</span></li>
+
+<li>  
+<span class="c8"><a href="http://www.nature.com/neuro/journal/v19/n3/pdf/nn.4243.pdf" > Sophie Deneve and Christian Machen, Efficient codes and balanced networks.
+</a> <em>  Nature Neuroscience, perspective paper. 
+</em>  2016  19(3).  375-382 </span></li>
+
+<h4>Supplementary (balanced networks) </h4>
+
+<li>
+Bayesian Spiking Neurons I: Inference (Deneve)
+http://www.iec-lnc.ens.fr/IMG/Files/GNT/Publications/deneve2008a.pdf 
+</li>
+<li>
+
+Efficient computation and cue integration with noisy population codes (Deneve et al.)
+http://www.nature.com/neuro/journal/v4/n8/full/nn0801_826.html
+</li>
+</ul>
+
+<h3>Week 11 (April 15) Representational Similarity Analysis (Location changed) </h3>
+<ul> 
+<li> Yimeng (1) Note Location change: 1-2 p.m NSH 1507 Carl Doersch defense. 2-3 GHC 8102 course presentation.
+</li> 
+
+
+<li>  
+<span class="c8"><a href="http://www.nature.com/neuro/journal/v19/n3/pdf/nn.4244.pdf" > Daniel L K Yamins & James J DiCarlo, Using goal-driven deep learning models to understand sensory cortex. </a> <em>  Nature Neuroscience,
+</em> 2016, 19(3), 3656-364 </span></li>
+
+
+<h4>Supplementary (RSA analysis) </h4>
+<li>
+Cadieu, C. F., Hong, H., Yamins, D. L., Pinto, N., Ardila, D., Solomon, E. A., et al. (2014). Deep Neural Networks Rival the Representation of Primate IT Cortex for Core Visual Object Recognition. PLoS Comput Biol, 10(12), e1003963. http://doi.org/10.1371/journal.pcbi.1003963.s006
+
+</li>
+<li>
+Cadieu, C. F., Hong, H., Yamins, D. L., Pinto, N., Majaj, N. J., & DiCarlo, J. J. (2013). The Neural Representation Benchmark and its Evaluation on Brain and Machine. Presented at the International Conference on Learning Representations 2013.
+</li>
+<li>
+
+Khaligh-Razavi, S.-M., & Kriegeskorte, N. (2014). Deep Supervised, but Not Unsupervised, Models May Explain IT Cortical Representation. PLoS Comput Biol, 10(11), e1003915. http://doi.org/10.1371/journal.pcbi.1003915
+
+</li>
+<li>
+Kriegeskorte, N., Mur, M., & Bandettini, P. A. (2008a). Representational similarity analysis - connecting the branches of systems neuroscience. Frontiers in Systems Neuroscience, 2(4). http://doi.org/10.3389/neuro.06.004.2008
+
+</li>
+<li>
+Kriegeskorte, N., Mur, M., Ruff, D. A., Kiani, R., Bodurka, J., Esteky, H., et al. (2008b). Matching Categorical Object Representations in Inferior Temporal Cortex of Man and Monkey. Neuron, 60(6), 1126–1141. http://doi.org/10.1016/j.neuron.2008.10.043
+</li>
+<li>
+
+Yamins, D. L., Hong, H., Cadieu, C. F., & DiCarlo, J. J. (2013). Hierarchical Modular Optimization of Convolutional Networks Achieves Representations Similar to Macaque IT and Human Ventral Stream. In C. J. C. Burges, L. Bottou, M. Welling, Z. Ghahramani, & K. Q. Weinberger (Eds.), Advances in Neural Information Processing Systems 26 (pp. 3093–3101).
+
+</li>
+<li>
+Yamins, D. L., Hong, H., Cadieu, C. F., Solomon, E. A., Seibert, D., & DiCarlo, J. J. (2014). Performance-optimized hierarchical models predict neural responses in higher visual cortex. Proceedings of the National Academy of Sciences, 111(23), 8619–8624. http://doi.org/10.1073/pnas.1403112111
+
+</li>
+
+
+</li>
+</ul>
+
+<h3>Week 12 (April 22) Sparse HMAX and Deep Residue Networks </h3>
+<ul> 
+<li> Zhihao (1), Xiaolong (2-4)
+</li> 
+
+
+<li>  
+<span class="c8"><a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0081813" > Xiaolin Hu, Jianwei Zhang, Jianmin Li, bo Zhang. (2014) Sparsity-regularized HMAX for Visual Recognition   
+</a> <em> PLOS one.  
+</em> 9(1) e81813- 1-12 (Matlab codes at http://www.xlhu.cn/software/shmax.html</span></li>
+
+<li>  
+<span class="c8"><a href="http://arxiv.org/pdf/1512.03385v1.pdf" > Deep learning residue networks 
+</a> <em> archived.
+</em>  http://arxiv.org/pdf/1512.03385v1.pdf </span></li>
+
+<li>  
+<span class="c8"><a href="http://arxiv.org/pdf/1603.05027v2.pdf" > Identity in 
+Deep residue networks 
+</a> <em> archived.
+</em>  http://arxiv.org/pdf/1603.05027v2.pdf </span></li>
+
+<li>  
+<span class="c8"><a href="http://arxiv.org/pdf/1603.09382v2.pdf" > Deep Networks with Stochastic Depth
+</a> <em> archived.
+</em>  http://arxiv.org/pdf/1603.09382v2.pdf </span></li>
+
+</li>
+</ul>
+
+
+
+<h3>Week 13 (April 29) Memory System and One-shot Learning  </h3>
+<ul> 
+<li> Faisal (1)  Chen Liu (2-4)  
+</li> 
+
+<li>  
+<span class="c8"><a href="http://www.nature.com/neuro/journal/v19/n3/full/nn.4237.html" > Rishidev Chaudhuri & Ila Fiete: Computational principles of memory.  
+</a> <em> Nature Neuroscience, 
+</em> march 2016. pp394 – 403  </span></li>
+
+<li>  
+<span class="c8"><a href="http://dspace.mit.edu/bitstream/handle/1721.1/60025/MIT-CSAIL-TR-2010-052.pdf?sequence=1" > Salakhutdinov, Tenenbaum, Torralba (2015) One Shot Learning with a Hierarchical Nonparametric Bayesian Model, 
+</a> <em> MIT CSAIL TR 2010-052.
+</em> Technical Report </span></li>
+
+<li>  
+<span class="c8"><a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Wong_One_Shot_Learning_ICCV_2015_paper.pdf" > Wong and Yuillei (2015) One Shot Learning via Compositions of Meaningful Patches, 
+</a> <em>  ICCV 2015.
+</em> Conference paper. </span></li>
+
+<li>  
+<span class="c8"><a href="http://link.springer.com/chapter/10.1007/978-3-319-16178-5_7" > Shiry Ginosar, Daniel Haas, Tim Brown, Jitendra Malik (2014)  Detecting People in Cubist Art( 
+</a> <em>  Computer Vision - ECCV 2014 Workshops.
+</em>  Volume 8925 of the series Lecture Notes in Computer Science pp 101-116 </span></li>
+
+<h4>Supplementary (One shot learning) </h4>
+<li>
+One-shot learning with Bayesian Networks, by Maas and Kemp: http://repository.cmu.edu/psychology/972/
+</li>
+<li>
+A Bayesian approach to unsupervised one-shot learning of object categories, by Fei-fei Li: http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1238476
+</li>
+
+</li>
+</ul>
+
+
+
+
+<hr>
+
+Questions or comments:
+contact <a href="mailto:tai at cnbc.cmu.edu">Tai Sing Lee</a>
+<br>
+<!-- Created: Tue Jan 12 21:00:58 EST 2010 -->
+
+
+</body>
+
+</html>

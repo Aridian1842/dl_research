@@ -1,0 +1,26 @@
+diff --git a/dqn/train_agent.lua b/dqn/train_agent.lua
+index 24f75c6..6e15d18 100644
+--- a/dqn/train_agent.lua
++++ b/dqn/train_agent.lua
+@@ -94,8 +94,8 @@ while step < opt.steps do
+         end
+     end
+ 
+-    -- display screen
+-    win = image.display({image=screen, win=win})
++    -- display screen - this runs in the initial phase before training
++    -- win = image.display({image=screen, win=win})
+ 
+     if step % opt.prog_freq == 0 then
+         assert(step==agent.numSteps, 'trainer step: ' .. step ..
+@@ -122,6 +122,10 @@ while step < opt.steps do
+ 
+             -- Play game in test mode (episodes don't end when losing a life)
+             screen, reward, terminal = game_env:step(game_actions[action_index])
++    
++            -- display screen - it will appear after the first evaluation round
++            -- if you reload a pretrained network, comment the previous "win" and use this one.
++            win = image.display({image=screen, win=win})
+ 
+             if estep%1000 == 0 then collectgarbage() end
+ 
